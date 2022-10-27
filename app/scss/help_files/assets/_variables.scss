@@ -1,0 +1,34 @@
+// Fonts
+// ------- Default font -------
+$sans: 'Helvetica', 'Verdana', 'Arial', sans-serif;
+
+// ------- Custom fonts -------
+$main-font: 'Lato', $sans;
+
+// Fonts sizes
+$base-font: 13;
+
+// Fonts weight
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+// Breakpoints
+$xs: 375;
+$sm: 576;
+$md: 768;
+$lg: 992;
+$xl: 1200;
+$xxl: 1400;
+
+//Colors
+$main-clr: #3e9cdc;
+$secondary-clr: #272733;
+$payment-clr: #c3c3c3;
+
+$txt-clr: #272733;
+$txt-bg-clr: #fff;
+
+$border-main-clr: #286690;
+
+$link-hover-clr: #3e9cdc;
