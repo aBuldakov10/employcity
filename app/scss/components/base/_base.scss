@@ -16,6 +16,7 @@ body {
   min-width: 320px;
   font-family: $main-font;
   font-size: $base-font+px;
+  color: $txt-clr;
   line-height: 1.2;
 }
 
@@ -25,7 +26,7 @@ main {
 
 a {
   text-decoration: none;
-  transition: .2s ease;
+  transition: $transition;
 
   &:hover {
     color: $link-hover-clr;
@@ -152,9 +153,21 @@ input[type="password"] {
   overflow: hidden;
 }
 
+.is-blur {
+  main,
+  footer {
+    filter: blur(2px);
+  }
+}
+
 // Custom general layout style for all pages in project
 .container {
   max-width: 1210px;
-  padding: 0 20px;
+  padding: 0 15px;
   margin: 0 auto;
+
+  @include media(min, $md) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
