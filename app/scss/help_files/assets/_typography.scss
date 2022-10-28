@@ -8,13 +8,36 @@ p {
   margin-top: 0;
 }
 
-h1,
-h2 {
-  //line-height: 1.2;
+.h1 {
+  @include font-size(28);
+  line-height: 1.16;
+
+  @include media(min, $md) {
+    @include font-size(38);
+  }
+
+  @include media(min, $lg) {
+    @include font-size(48);
+  }
+}
+
+.h2 {
+  @include font-size(36);
 }
 
 p {
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+
+  @include media(min, $lg) {
+    &:hover {
+      color: $link-hover-clr;
+    }
   }
 }

@@ -1,0 +1,53 @@
+.banner-section {
+  background: url("../img/main-banner.jpg") no-repeat top;
+  background-size: cover;
+
+  &__content {
+    padding: 30% 0;
+
+    @include media(min, $sm) {
+      padding: 20% 0;
+    }
+
+    @include media(min, $md) {
+      max-width: 780px;
+    }
+
+    @include media(min, $lg) {
+      padding: 17.3% 0;
+    }
+  }
+}
+
+.banner_text {
+  @include font-size(16);
+
+  @include media(min, $md) {
+    @include font-size(20);
+  }
+
+  &__title {
+    margin-bottom: .5em;
+    font-weight: $bold;
+  }
+
+  &__list-item {
+    position: relative;
+    margin-bottom: .25em;
+    padding-left: 25px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 5px;
+      height: 2px;
+      background: $txt-clr;
+
+      @include media(min, $md) {
+        top: 12px;
+      }
+    }
+  }
+}
