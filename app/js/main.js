@@ -41,4 +41,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', handleMobMenuAction);
   window.addEventListener('orientationchange', handleMobMenuAction);
+
+  /*** Init select in form ***/
+  $('.js-select2').select2({
+    minimumResultsForSearch: 20,
+    dropdownCssClass: 'order-type-dropdown',
+  });
+
+  /*** Set form range value ***/
+  const rangeElem = document.querySelector('.js-form-range');
+  const rangeElemVal = document.querySelector('.js-form-range-value');
+
+  rangeElem.addEventListener('input', function () {
+    rangeElemVal.innerHTML = `${this.value} %`;
+  });
+
+  /*** Add file ***/
+  const addFileBtn = document.querySelector('.js-form-file__btn');
+  const addFileTxt = document.querySelector('.form-file__title');
+
+  addFileBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const thisParent = this.closest('.form-file');
+    const thisInputFileField = thisParent.querySelector('.form__input-file');
+
+    thisInputFileField.click();
+
+    thisInputFileField.addEventListener('change', () => {
+      const countFiles = thisInputFileField.files.length;
+      let addFileBtnString = '';
+
+      if (countFiles >= 1) {
+        addFileBtnString = `Добавлено ${countFiles} файла(ов)`;
+      } else {
+        addFileBtnString = 'Прикрепить файл';
+      }
+
+      addFileTxt.innerHTML = addFileBtnString;
+    });
+  });
 });

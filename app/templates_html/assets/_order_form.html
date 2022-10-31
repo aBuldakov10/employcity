@@ -1,0 +1,50 @@
+<!-- Order form -->
+<form class="js-order-form order-form form" name="order">
+  <div class="form__body">
+    <div class="form__group">
+      <select id="system-type" class="js-select2" name="system-type">
+        <option value="" selected>Выберите тип системы</option>
+        <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+        <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+        <option value="Et harum quidem">Et harum quidem</option>
+        <option value="Temporibus autem">Temporibus autem</option>
+        <option value="Itaque earum rerum">Itaque earum rerum</option>
+        <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+        <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+        <option value="Et harum quidem">Et harum quidem</option>
+        <option value="Temporibus autem">Temporibus autem</option>
+        <option value="Itaque earum rerum">Itaque earum rerum</option>
+      </select>
+    </div>
+    
+    <div class="form__group">
+      <input class="form__input" type="text" name="mail" placeholder="Ваш e-mail">
+    </div>
+    
+    <div class="form__group">
+      <input class="form__input" type="text" name="username" placeholder="Ваше имя">
+    </div>
+    
+    <div class="form__group form-range">
+      <div class="form-range__heading">
+        <p class="form-range__title">Sed ut perspiciatis, unde omnis iste natus</p>
+        <span class="js-form-range-value form-range__value">50 %</span>
+      </div>
+      
+      <input class="js-form-range form__input-range" type="range" name="range" min="" max="100" step="1" value="50">
+    </div>
+    
+    <div class="form__group form-file">
+      <button class="js-form-file__btn form-file__btn btn">
+        <span class="form-file__icon">@include('_svg.html', {"svgId": "file"})</span>
+        <span class="form-file__title">Прикрепить файл</span>
+      </button>
+      
+      <input class="form__input-file" type="file" name="file" multiple>
+    </div>
+  </div>
+  
+  <div class="form__footer">
+    <button class="form__submit btn" type="submit" name="order-submit">Отправить</button>
+  </div>
+</form>

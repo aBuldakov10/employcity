@@ -22,7 +22,15 @@ p {
 }
 
 .h2 {
-  @include font-size(36);
+  @include font-size(24);
+
+  @include media(min, $md) {
+    @include font-size(30);
+  }
+
+  @include media(min, $lg) {
+    @include font-size(36);
+  }
 }
 
 p {
